@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1 class="gallery-title">My Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item nature">
+      <img src="https://via.placeholder.com/300x200?text=Nature+1" alt="Nature" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="gallery-item city">
+      <img src="https://via.placeholder.com/300x200?text=City+1" alt="City" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="gallery-item animals">
+      <img src="https://via.placeholder.com/300x200?text=Animal+1" alt="Animal" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="gallery-item nature">
+      <img src="https://via.placeholder.com/300x200?text=Nature+2" alt="Nature" onclick="openLightbox(this.src)" />
+    </div>
+    <!-- Add more items with categories -->
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img class="lightbox-content" id="lightbox-img" />
+    <div class="nav-btn prev" onclick="navigateLightbox(-1)">❮</div>
+    <div class="nav-btn next" onclick="navigateLightbox(1)">❯</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
